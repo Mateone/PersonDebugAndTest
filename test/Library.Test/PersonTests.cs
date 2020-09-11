@@ -13,9 +13,20 @@ namespace Tests
         }
 
         [Test]
-        public void TestPerson1() // Cambiá el nombre para indicar qué estás probando
+        public void TestPersonNameCorrecto() // Cambiá el nombre para indicar qué estás probando
         {
-            string expected = 
+            string expected = "Mateo";
+            string name = "Mateo";
+            Person person = new Person(name, "50757706");
+            Assert.AreEqual(expected, person.Name);
+        }
+        [Test]
+        public void TestPersonIDCorrecto() // Cambiá el nombre para indicar qué estás probando
+        {
+            string expected = "50757706";
+            string id = "50757706";
+            Person person = new Person("Mateo", id);
+            Assert.AreEqual(expected, person.ID);
         }
     }
 }
